@@ -3,7 +3,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import MainLayout from './layouts/MainLayout'
 
 // Site Pages
-import MainPage from './pages/Mainpage'
+import MainPage from './pages/MainPage'
 
 const App = () => {
 
