@@ -1,8 +1,17 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
 
 const MainPage = () => {
   return (
-    <div>Mainpage</div>
+
+    <>
+
+      <NavBar />
+
+      <div>Mainpage</div>
+      
+    </>
+
   )
 }
 
