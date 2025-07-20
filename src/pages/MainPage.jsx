@@ -27,7 +27,7 @@ const MainPage = () => {
 
       <NavBar />
 
-      <p className='flex justify-center text-[#546A7B] mt-4'>Track the growth of video games and the total activity of the top 10 games!</p>
+      <p className='flex justify-center text-[#546A7B] mt-4 text-lg font-medium'>Stay ahead of the game: track market growth and follow the most-played titles — all in one streamlined dashboard!</p>
 
       {/* FIRST GRAPH */}
 
