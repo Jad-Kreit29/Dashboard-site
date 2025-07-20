@@ -2,6 +2,10 @@
 
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
+import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
+
+import { ChartLegend, ChartLegendContent } from "@/components/ui/chart"
+
 import { ChartContainer } from "@/components/ui/chart"
 
 const chartData = [
@@ -18,13 +22,13 @@ const chartData = [
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "#2563eb",
+  allPeak: {
+    label: "All-Time Peak",
+    color: "var(--chart-4)",
   },
-  mobile: {
-    label: "Mobile",
-    color: "#60a5fa",
+  dayPeak: {
+    label: "24 Hour Peak",
+    color: "var(--chart-5)",
   },
 }
 
@@ -44,11 +48,14 @@ export default function UsersChart( { firstGame, secondGame, thirdGame } ) {
       tickLine={false}
       tickMargin={10}
       axisLine={false}
-      tickFormatter={(value) => value.slice(0, 10)}
+      tickFormatter={(value) => value.slice(0, 20)}
         />
 
-        <Bar dataKey="allPeak" fill="var(--color-mobile)" radius={4} />
-        <Bar dataKey="dayPeak" fill="var(--color-desktop)" radius={4} />
+        <ChartTooltip content={<ChartTooltipContent />} />
+        <ChartLegend content={<ChartLegendContent />} />
+
+        <Bar dataKey="allPeak" fill="var(--color-allPeak)" radius={4} />
+        <Bar dataKey="dayPeak" fill="var(--color-dayPeak)" radius={4} />
         
       </BarChart>
 
