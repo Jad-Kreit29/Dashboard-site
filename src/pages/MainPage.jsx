@@ -7,7 +7,12 @@ import Combox from '../components/Combox'
 // Graphs
 import UsersChart from '../components/UsersChart'
 
+
 const MainPage = () => {
+
+  const [firstGame, setFirstGame] = React.useState()
+  const [secondGame, setSecondGame] = React.useState()
+  const [thirdGame, setThirdGame] = React.useState()
 
   return (
 
@@ -23,15 +28,15 @@ const MainPage = () => {
 
         <div className='flex justify-center mt-8 space-x-4'>
 
-          <Combox/>
-          <Combox/>
-          <Combox/>
+          <Combox onChangeId={setFirstGame} />
+          <Combox onChangeId={setSecondGame} />
+          <Combox onChangeId={setThirdGame} />
 
         </div>
 
         <div className='flex justify-center mt-8'>
 
-          <UsersChart />
+          <UsersChart firstGame={firstGame} secondGame={secondGame} thirdGame={thirdGame} />
 
         </div>
 

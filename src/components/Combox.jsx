@@ -9,48 +9,58 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 
 const games = [
   {
-    value: "pubg",
-    label: "PUBG: BATTLEGROUNDS",
-  },
-  {
     value: "blackMyth",
     label: "Black Myth: Wukong",
-  },
-  {
-    value: "palworld",
-    label: "Palworld",
-  },
-  {
-    value: "cs2",
-    label: "Counter-Strike 2",
-  },
-  {
-    value: "monsterHunter",
-    label: "Monster Hunter Wilds",
-  },
-  {
-    value: "lostark",
-    label: "Lost Ark",
-  },
-  {
-    value: "dota",
-    label: "Dota 2",
-  },
-  {
-    value: "cyberpunk",
-    label: "Cyberpunk 2077",
-  },
-  {
-    value: "elden",
-    label: "Elden Ring",
+    id: 0,
   },
   {
     value: "banana",
     label: "Banana",
+    id: 1,
+  },
+  {
+    value: "monsterHunter",
+    label: "Monster Hunter Wilds",
+    id: 2,
+  },
+  {
+    value: "cs2",
+    label: "Counter-Strike 2",
+    id: 3,
+  },
+  {
+    value: "lostark",
+    label: "Lost Ark",
+    id: 4,
+  },
+  {
+    value: "palworld",
+    label: "Palworld",
+    id: 5,
+  },
+  {
+    value: "pubg",
+    label: "PUBG: BATTLEGROUNDS",
+    id: 6,
+  },
+  {
+    value: "dota",
+    label: "Dota 2",
+    id: 7,
+  },
+  {
+    value: "elden",
+    label: "Elden Ring",
+    id: 8,
+  },
+  {
+    value: "cyberpunk",
+    label: "Cyberpunk 2077",
+    id: 9,
   },
 ]
 
-const Combox = () => {
+const Combox = ({ onChangeId }) => {
 
     const [open, setOpen] = React.useState(false)
     const [value, setValue] = React.useState("")
@@ -92,6 +102,7 @@ const Combox = () => {
                             value={game.value}
                             onSelect={(currentValue) => {
                                 setValue(currentValue === value ? "" : currentValue)
+                                onChangeId(game.id);
                                 setOpen(false)
                             }}
                             >
