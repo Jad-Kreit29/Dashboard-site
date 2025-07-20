@@ -5,12 +5,16 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import { ChartContainer } from "@/components/ui/chart"
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { game: "PUBG: BATTLEGROUNDS", allPeak: 3257248, dayPeak: 957373 },
+  { game: "Black Myth: Wukong", allPeak: 2415714, dayPeak: 39620 },
+  { game: "Palword", allPeak: 2101867, dayPeak: 67743 },
+  { game: "CS2", allPeak: 1862531, dayPeak: 1271662 },
+  { game: "Monster Hunter Wilds", allPeak: 1384608, dayPeak: 28350 },
+  { game: "Lost Ark", allPeak: 1325305, dayPeak: 13784 },
+  { game: "Dota 2", allPeak: 1295114, dayPeak: 610301 },
+  { game: "Cyberpunk 2077", allPeak: 1054388, dayPeak: 64517 },
+  { game: "Elden Ring", allPeak: 953426, dayPeak: 54686 },
+  { game: "Banana", allPeak: 917272, dayPeak: 113582 },
 ]
 
 const chartConfig = {
@@ -26,22 +30,22 @@ const chartConfig = {
 
 export default function UsersChart() {
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px] w-[600px]">
+    <ChartContainer config={chartConfig} className="min-h-[200px] w-[800px]">
 
       <BarChart accessibilityLayer data={chartData}>
 
         <CartesianGrid vertical={false} />
 
         <XAxis
-      dataKey="month"
+      dataKey="game"
       tickLine={false}
       tickMargin={10}
       axisLine={false}
-      tickFormatter={(value) => value.slice(0, 3)}
+      tickFormatter={(value) => value.slice(0, 10)}
         />
 
-        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+        <Bar dataKey="allPeak" fill="var(--color-mobile)" radius={4} />
+        <Bar dataKey="dayPeak" fill="var(--color-desktop)" radius={4} />
         
       </BarChart>
 
