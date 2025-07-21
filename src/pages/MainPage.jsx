@@ -72,7 +72,7 @@ const MainPage = () => {
                 <div className="flex justify-center items-center gap-2 leading-none font-medium">
 
                   <p>{`
-                    ${t('lineGraphFooterTop')}`} <a href='https://www.blog.udonis.co/mobile-marketing/mobile-games/gaming-industry' className='duration-150 ease-in-out text-[#656B7B] hover:text-[#494E5A] hover:underline cursor-pointer'>
+                    ${t('lineGraphFooterTop')}`} <a target="_blank" href='https://www.blog.udonis.co/mobile-marketing/mobile-games/gaming-industry' className='duration-150 ease-in-out text-[#656B7B] hover:text-[#494E5A] hover:underline cursor-pointer'>
                     blog.udonis
                     </a>
                   </p>
@@ -151,7 +151,7 @@ const MainPage = () => {
                 <div className="flex justify-center items-center gap-2 leading-none font-medium">
 
                   <p>
-                    Retrieved from <a href='https://steamdb.info/charts/' className='duration-150 ease-in-out text-[#656B7B] hover:text-[#494E5A] hover:underline cursor-pointer'>
+                    Retrieved from <a target="_blank" href='https://steamdb.info/charts/' className='duration-150 ease-in-out text-[#656B7B] hover:text-[#494E5A] hover:underline cursor-pointer'>
                     steam.db
                     </a>
                   </p>
