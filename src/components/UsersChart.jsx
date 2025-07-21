@@ -1,6 +1,6 @@
 "use client"
 
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 
 import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
@@ -12,7 +12,7 @@ const chartData = [
   { game: "Black Myth: Wukong", allPeak: 2415714, dayPeak: 39620 },
   { game: "Banana", allPeak: 917272, dayPeak: 113582 },
   { game: "Monster Hunter Wilds", allPeak: 1384608, dayPeak: 28350 },
-  { game: "CS2", allPeak: 1862531, dayPeak: 1271662 },
+  { game: "Counter-Srike 2", allPeak: 1862531, dayPeak: 1271662 },
   { game: "Lost Ark", allPeak: 1325305, dayPeak: 13784 },
   { game: "Palword", allPeak: 2101867, dayPeak: 67743 },
   { game: "PUBG: BATTLEGROUNDS", allPeak: 3257248, dayPeak: 957373 },
@@ -54,8 +54,18 @@ export default function UsersChart( { firstGame, secondGame, thirdGame } ) {
         <ChartTooltip content={<ChartTooltipContent />} />
         <ChartLegend content={<ChartLegendContent />} />
 
-        <Bar dataKey="allPeak" fill="var(--color-allPeak)" radius={4} />
-        <Bar dataKey="dayPeak" fill="var(--color-dayPeak)" radius={4} />
+        <Bar dataKey="allPeak" fill="var(--color-allPeak)" radius={4}>
+
+          <LabelList position="top" formatter={(value) => value.toLocaleString()} className="font-bold"/>
+
+        </Bar>
+
+        <Bar dataKey="dayPeak" fill="var(--color-dayPeak)" radius={4}>
+
+          <LabelList position="top" formatter={(value) => value.toLocaleString()} className="font-bold"/>
+
+        </Bar>
+
         
       </BarChart>
 
