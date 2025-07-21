@@ -159,7 +159,7 @@ const MainPage = () => {
                 </div>
 
                 <div className="text-[12.5px] text-muted-foreground flex items-center gap-2 leading-none mt-1.5">
-                  Showing the number of players in the last 24 hours, as well as the highest number reached throughout a game's lifetime
+                  Showing the number of players in the last 24 hours as well as the highest number reached throughout a game's lifetime
                 </div>
                 
               </div>

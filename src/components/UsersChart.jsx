@@ -51,7 +51,6 @@ export default function UsersChart( { firstGame, secondGame, thirdGame } ) {
       tickFormatter={(value) => value.slice(0, 20)}
         />
 
-        <ChartTooltip content={<ChartTooltipContent />} />
         <ChartLegend content={<ChartLegendContent />} />
 
         <Bar dataKey="allPeak" fill="var(--color-allPeak)" radius={4}>
