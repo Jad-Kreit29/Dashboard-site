@@ -2,8 +2,6 @@
 
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 
-import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
-
 import { ChartLegend, ChartLegendContent } from "@/components/ui/chart"
 
 import { ChartContainer } from "@/components/ui/chart"
@@ -39,7 +37,7 @@ export default function UsersChart( { firstGame, secondGame, thirdGame } ) {
   return (
     <ChartContainer config={chartConfig} className="min-h-[200px] w-[800px]">
 
-      <BarChart accessibilityLayer data={chartData.filter((_, index) => filteredGames.includes(index))}>
+      <BarChart accessibilityLayer data={chartData.filter((_, index) => filteredGames.includes(index))} margin={{top:20}}>
 
         <CartesianGrid vertical={false} />
 
@@ -65,7 +63,6 @@ export default function UsersChart( { firstGame, secondGame, thirdGame } ) {
 
         </Bar>
 
-        
       </BarChart>
 
     </ChartContainer>

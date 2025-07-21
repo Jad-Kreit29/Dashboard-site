@@ -101,7 +101,7 @@ const MainPage = () => {
 
           <CardHeader>
 
-            <CardTitle>Most Played Video Games on Steam</CardTitle>
+            <CardTitle>Active Number of Players within Top 10 Video Games on Steam</CardTitle>
             <CardDescription>July 15th, 2025</CardDescription>
 
           </CardHeader>
@@ -136,7 +136,7 @@ const MainPage = () => {
 
             <div className='flex justify-center'>
 
-              <UsersChart firstGame={firstGame} secondGame={secondGame} thirdGame={thirdGame} />
+              <UsersChart firstGame={firstGame} secondGame={secondGame} thirdGame={thirdGame}/>
 
             </div>
 

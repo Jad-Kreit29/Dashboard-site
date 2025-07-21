@@ -7,7 +7,7 @@ const resources = {
             pageHeader: "Stay ahead of the game: track market growth and follow the most-played titles — all in one streamlined dashboard!",
             pageSubtitle: "Gaming at Glance",
 
-            lineGraphTitle: "Video Game Market Growth",
+            lineGraphTitle: "Video Game Industry Market Growth Over Time",
             lineGraphDescription: "January 2017 - June 2024",
             lineGraphSelectTitle: "Currency",
             lineGraphFooterTop: "Retrieved from",
@@ -21,7 +21,7 @@ const resources = {
             pageHeader: "Gardez une longueur d'avance : suivez la croissance du marché et suivez les titres les plus joués, le tout dans un tableau de bord simplifié !",
             pageSubtitle: "Aperçu des jeux vidéo",
 
-            lineGraphTitle: "Croissance du marché des jeux vidéo",
+            lineGraphTitle: "Croissance du marché du jeu vidéo au fil du temps",
             lineGraphDescription: "Janvier 2017 - Juin 2024",
             lineGraphSelectTitle: "Devise",
             lineGraphFooterTop: "Récupéré de",
