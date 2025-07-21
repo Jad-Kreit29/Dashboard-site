@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export default function MarketSelect({ setCurrency }) {
+export default function MarketSelect({ translation, setCurrency }) {
 
   return (
 
@@ -18,7 +18,7 @@ export default function MarketSelect({ setCurrency }) {
 
         <SelectGroup>
 
-          <SelectLabel>Currency</SelectLabel>
+          <SelectLabel>{translation('lineGraphSelectTitle')}</SelectLabel>
           <SelectItem value="usd">USD</SelectItem>
           <SelectItem value="cad">CAD</SelectItem>
           <SelectItem value="eur">EUR</SelectItem>
