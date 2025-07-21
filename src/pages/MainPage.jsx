@@ -22,8 +22,10 @@ const MainPage = () => {
   const [secondGame, setSecondGame] = React.useState()
   const [thirdGame, setThirdGame] = React.useState()
 
+  // States for line chart
   const [currency, setCurrency] = React.useState("")
 
+  // Logic to handle site translation
   const { t, i18n } = useTranslation();
 
   const handleLanguageChange = (language) => {

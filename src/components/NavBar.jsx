@@ -25,8 +25,8 @@ const NavBar = ({ translation, changeLanguage }) => {
 
                 <TabsList>
 
-                  <TabsTrigger value="en">EN</TabsTrigger>
-                  <TabsTrigger value="fr">FR</TabsTrigger>
+                  <TabsTrigger value="en" className='cursor-pointer'>EN</TabsTrigger>
+                  <TabsTrigger value="fr" className='cursor-pointer'>FR</TabsTrigger>
 
                 </TabsList>
 
